@@ -1,50 +1,21 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Home</ion-title>
-
+<ion-header class="center">
+  <ion-toolbar color="medium">
     <ion-buttons slot="start">
       <ion-menu-button menu="main-menu"></ion-menu-button>
     </ion-buttons>
     
+      <ion-item lines="none" color="medium">
+          <h1>
+            Jada-Rae Brown
+          </h1>
+      </ion-item>
+    
   </ion-toolbar>
+
+  
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <div color="primary">
-
-    <ion-grid>
-      <ion-row>
-        <ion-col class="ion-margin-start ion-margin-top">
-         <h3 class="ion-no-margin">
-            Upcoming Events
-         </h3>      
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-
-    <ion-slides [options]="sliderConfig">
-      <ion-slide>
-        <ion-card>
-          <img src="assets/flyer5.jpg" class = "size-img"/>
-        </ion-card>
-      </ion-slide>
-  
-      <ion-slide>
-        <ion-card>
-          <img src="assets/flyer6.png" class = "size-img"/>
-        </ion-card>
-      </ion-slide>
-  
-      <ion-slide>
-        <ion-card>
-          <img src="assets/flyer7.jpg" class = "size-img"/>
-        </ion-card>
-      </ion-slide>
-  
-    </ion-slides>
-
-  </div>
-  
+<ion-content>
 
   <div>
     <ion-grid>
@@ -87,61 +58,69 @@
 
 
   <div class="ion-margin-bottom">
-    <ion-card button (click)="presentModal()">
-      <img src="assets/flyer2.png" class = "size-img"/>
-      <ion-card-content>
-
-        <ion-grid class="ion-no-padding">
-          <ion-row>
-           
-            Club Tropicana Bunch
-              <br>
-              Saturday, August 19, 2020
-           
-          </ion-row>
-        </ion-grid>
-      
-      </ion-card-content>
-    </ion-card>
-
     <ion-card>
-      <img src="assets/flyer4.png" class = "size-img"/>
+      <img src="assets/flyer1.jpg" class = "size-img"/>
       <ion-card-content>
 
         <ion-grid class="ion-no-padding">
           <ion-row>
-           
+            <ion-col size="9">
               Circus Party
               <br>
               Friday, July 10, 2020
-           
+            </ion-col>
+
+            <ion-col size="3">
+              <b>Private</b>
+            </ion-col>
           </ion-row>
         </ion-grid>
       
       </ion-card-content>
     </ion-card>
-
-
-    <ion-card>
-      <img src="assets/flyer5.jpg" class = "size-img"/>
-      <ion-card-content>
-
-        <ion-grid class="ion-no-padding">
-          <ion-row>
-           
-              Circus Party
-              <br>
-              Friday, July 10, 2020
-           
-          </ion-row>
-        </ion-grid>
-      
-      </ion-card-content>
-    </ion-card>
-
-
   </div>
 
-  
+  <div class="ion-margin-bottom">
+    <ion-card>
+      <img src="assets/flyer2.png" class = "size-img"/>
+      <ion-card-content>
+        <ion-grid class="ion-no-padding">
+          <ion-row>
+            <ion-col size="9">
+              Club Tropicana Bunch
+              <br>
+              Saturday, August 19, 2020
+            </ion-col>
+
+            <ion-col size="3">
+              <b>Public</b>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div class="ion-margin-bottom">
+    <ion-card>
+      <img src="assets/flyer3.jpg" class = "size-img"/>
+      <ion-card-content>
+
+        <ion-grid class="ion-no-padding">
+          <ion-row>
+            <ion-col size="9">
+              Charity Event
+              <br>
+              Monday, December 12, 2020
+            </ion-col>
+
+            <ion-col size="3">
+              <b>Private</b>>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+  </div>
 
 </ion-content>

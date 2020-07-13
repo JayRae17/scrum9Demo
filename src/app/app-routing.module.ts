@@ -11,6 +11,18 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'myevents',
+    loadChildren: () => import('./pages/myevents/myevents.module').then( m => m.MyeventsPageModule)
+  },
+  {
+    path: 'createvent',
+    loadChildren: () => import('./pages/createvent/createvent.module').then( m => m.CreateventPageModule)
+  },
+  {
+    path: 'logout',
+    loadChildren: () => import('./pages/logout/logout.module').then( m => m.LogoutPageModule)
+  },
 ];
 
 @NgModule({
