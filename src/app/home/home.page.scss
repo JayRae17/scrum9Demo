@@ -1,3 +1,7 @@
+ion-menu-button{
+  color: #628cff;
+}
+
 #container {
   text-align: center;
 
@@ -26,7 +30,96 @@
   text-decoration: none;
 }
 
-.size-img{
-  width: 100%;
-  height:12rem;
+
+
+
+.header-md::after{
+    background-image: none;
+}
+
+ion-searchbar{
+  --box-shadow: none;
+  --border-radius:6px;
+}
+
+.head-banner{
+  margin-top:2rem;
+  position: relative;
+  background-color: #f7f7f7;
+  height: 150px;
+  border-radius: 16px;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.banner-img{
+  position: absolute;
+  top: -13rem;
+  right: 10rem;
+  width: 20%;
+  height: 100%;
+}
+
+ion-row{
+
+  .big-message{
+    padding-left: 3rem;
+    top: -8rem;
+    font-size: 24px;
+    color: #575757;
+    letter-spacing: 1px;
+    position: absolute;
+  }
+}
+
+.slide-width{
+  height: 30%;
+}
+
+.card-width{
+  max-width: 90%;
+  min-width: 90%;
+}
+
+.ion-no-margin{
+
+  ion-button{
+    background: linear-gradient(90deg, #7590d6 0%, #4d71d7 100%);
+    font-size: 13px;
+    letter-spacing: 0px;
+  }
+
+}
+
+
+
+ion-card-subtitle{
+  color: #628cff;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+
+  ion-icon{
+    margin-right: 0.2rem;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+}
+
+ion-card-title{
+  font-size: 16px;
+  color:#2a4e7c;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+
+.description{
+  font-size: 13px;
+  margin-top: 0.4rem;
+  line-height: 1.2rem;
+  letter-spacing: 0.3px;
+  color: #979797;
+  margin-bottom: 1rem;
 }

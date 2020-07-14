@@ -1,97 +1,107 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Create New Event</ion-title>
-  </ion-toolbar>
-  <ion-item lines="none" >
-    <ion-text class="ion-margin ion-text-center line-heightmy" color="dark">
-      Create a new event by entering the necessary information related to the event.
-    </ion-text>
-  </ion-item>
-</ion-header>
 
 <ion-content>
-   
-  <ion-item>
-    <ion-label position="floating" color="secondary">NAME</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-label position="floating" color="secondary">TITLE</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-label position="floating" color="secondary">CATEGORY</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-label position="floating" color="secondary">COST</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
-
-   
-  <ion-item>
-    <ion-label position="floating" color="secondary">START DATE</ion-label>
-    <ion-datetime displayFormat="MM/DD/YYYY" min="2020-01-01" max="2040-12-31"></ion-datetime>
-  </ion-item>
-
-  <ion-item>
-    <ion-label position="floating" color="secondary">END DATE</ion-label>
-    <ion-datetime displayFormat="MM/DD/YYYY" min="2020-01-01" max="2040-12-31"></ion-datetime>
-  </ion-item>
-
-  <ion-grid>
-    <ion-row>
-
-      <ion-col>
-        <ion-item>
-          <ion-label position="floating" color="secondary">START TIME</ion-label>
-          <ion-datetime displayFormat="HH:mm"></ion-datetime>
-        </ion-item>      
-      </ion-col>
-
-      <ion-col>
-        <ion-item>
-          <ion-label position="floating" color="secondary">END TIME</ion-label>
-          <ion-datetime displayFormat="HH:mm"></ion-datetime>
-        </ion-item>
-      </ion-col>
-
-    </ion-row>
-  </ion-grid>
 
   
-
-  <ion-item>
-    <ion-label position="floating" color="secondary">END TIME</ion-label>
-    <ion-datetime displayFormat="HH:mm"></ion-datetime>
-  </ion-item>
-
-  <ion-item>
-    <ion-label position="floating" color="secondary">DESCRIPTION</ion-label>
-    <ion-textarea></ion-textarea>
-  </ion-item>
-
-  
-  <ion-button  class="ion-margin" expand="block"  fill="outline" color="secondary">Upload Flyer</ion-button>
+  <h1>Create New Event</h1>
  
+  <div class="instructions">
+    Create a new event by entering the necessary information related to your event. 
+  </div>
+  
+   
+  <div class="form">
+
+    <ion-item lines="none">
+      <ion-label position="stacked">NAME</ion-label>
+      <ion-input ></ion-input>
+    </ion-item>
+  
+    <ion-item lines="none">
+      <ion-label position="stacked">TITLE</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+  
+    <ion-item lines="none">
+      <ion-label position="stacked">CATEGORY</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+  
+    <ion-item lines="none">
+      <ion-label position="stacked">COST</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    
+        <ion-item lines="none">
+          <ion-label position="stacked">DESCRIPTION</ion-label>
+          <ion-textarea></ion-textarea>
+        </ion-item>
+  
+    <ion-grid>
+      <ion-row>
+        
+        <ion-col>
+          <ion-item>
+            <ion-label position="stacked">START DATE <ion-icon name="caret-down-outline"></ion-icon> </ion-label>
+            <ion-datetime displayFormat="MM/DD/YYYY" min="2020-01-01" max="2040-12-31"></ion-datetime>
+          </ion-item>
+        </ion-col>
 
 
+        <ion-col> 
+          <ion-item>
+            <ion-label position="stacked">END DATE  <ion-icon name="caret-down-outline"></ion-icon> </ion-label>
+            <ion-datetime displayFormat="MM/DD/YYYY" min="2020-01-01" max="2040-12-31"></ion-datetime>
+          </ion-item>
+        </ion-col>
 
-  <ion-grid class="ion-margin">
-    <ion-row>
+      </ion-row>
+    </ion-grid>
 
-      <ion-col>
-        <ion-button routerLink="/" expand="block"  color="medium">Back</ion-button>
-      </ion-col>
-
-      <ion-col>
-        <ion-button (click)="openToast()" expand="block"  color="secondary">Save</ion-button>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+     
+  
+    <ion-grid>
+      <ion-row>
+  
+        <ion-col>
+          <ion-item>
+            <ion-label position="stacked">START TIME <ion-icon name="caret-down-outline"></ion-icon> </ion-label>
+            <ion-datetime displayFormat="HH:mm"></ion-datetime>
+          </ion-item>      
+        </ion-col>
+  
+        <ion-col>
+          <ion-item>
+            <ion-label position="stacked">END TIME <ion-icon name="caret-down-outline"></ion-icon> </ion-label>
+            <ion-datetime displayFormat="HH:mm"></ion-datetime>
+          </ion-item>
+        </ion-col>
+  
+      </ion-row>
+    </ion-grid>
+  
+    <div class ="uploadbtn">
+      <ion-button  class="ion-margin"> 
+        <ion-icon name="cloud-upload-outline" slot="start"></ion-icon>
+        Upload Flyer
+      </ion-button>
+    </div>
+   
+  
+  
+  
+    <ion-grid class="ion-margin">
+      <ion-row>
+  
+        <ion-col>
+          <ion-button routerLink="/" expand="block"  color="medium">Back</ion-button>
+        </ion-col>
+  
+        <ion-col>
+          <ion-button (click)="openToast()" expand="block" color="light">Save</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
 
 
  

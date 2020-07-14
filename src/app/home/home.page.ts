@@ -23,7 +23,7 @@ export class HomePage {
   sliderConfig = {
     spaceBetween: 4,
     centeredSlides: true,
-    slidesPerView: 1.2
+    slidesPerView: 3
   }
 
   sliderConfigButton = {
