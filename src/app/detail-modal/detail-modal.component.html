@@ -1,62 +1,46 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Details
-    </ion-title>
-    <ion-buttons>
-      <ion-button (click)="dismissModal()">Close</ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
+
+<ion-buttons>
+    <ion-button class="close-btn" (click)="dismissModal()">Close</ion-button>
+</ion-buttons>
+ 
 
 
 <ion-content>
-  <img src="assets/flyer2.png" class = "size-img"/>
- 
-  <ion-item lines="none" class="ion-text-start"> 
-     <h1>Club Tropicana Bunch</h1>
-  </ion-item>
+<!-- 
+  <div class="menu-header-bg"></div> -->
 
-  <ion-grid class="ion-no-padding">
+  <ion-grid class="details">
     <ion-row>
-      <ion-col size="4"> 
-        <ion-item lines="none" class="ion-text-left"> 
-           <p>PARTY</p>
-        </ion-item>
+      
+      <ion-col>
+          <ion-card-subtitle> <ion-icon name="layers"></ion-icon>
+            Party
+          </ion-card-subtitle>
+         
+          <p class="event-header">Club Tropicana Bunch</p>
+          
+          <p class="small-details">
+            Iberostar Hotel <br> 
+            August 19, 2020 <br> 
+            3pm to 7pm <br> 
+            $3820.00
+          </p>
+
+      </ion-col>
+      
+      <ion-col>
+        
+        <div class="img-header">
+          <img src="assets/noimage.png" class = "detailed-img"/>
+        </div>      
+
       </ion-col>
 
-      <ion-col size="8">
-        <ion-item lines="none" class="ion-text-left"> 
-          <p><b>Iberostar Hotel</b></p>
-        </ion-item>
-      </ion-col>
     </ion-row>
-  </ion-grid>
 
-  <ion-grid class="ion-no-padding">
     <ion-row>
-      <ion-col size="4"> 
-        <ion-item lines="none" class="ion-text-left"> 
-           <p>August 19, 2020</p>
-        </ion-item>
-      </ion-col>
-
-      <ion-col size="6">
-        <ion-item lines="none" class="ion-text-left"> 
-          <p><b>3pm to 7pm</b></p>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-  
-  <ion-item lines="none" class="ion-text-start"> 
-    <p>$3820.00</p>
-  </ion-item>
-
-
-
-  <ion-item lines="none" class="line-height2 ion-margin">
-      Hello girls and boys! the time is near
+      <p class="description">
+        Hello girls and boys! the time is near
       Mark your calendars and grab your gear!
 
       Off to the ocean we will go
@@ -65,6 +49,21 @@
       If you're ready to sun all day,
       And hit the town at night to play,
       Call one of the girls right away!
-  </ion-item>
+      </p>
+    </ion-row>
 
+    <ion-row class="action-button">
+          
+      <ion-button (click)="moveNext()"> 
+        <ion-icon slot="start" name="create"></ion-icon> Edit
+      </ion-button>
+
+      <ion-button routerLink=""> 
+        <ion-icon slot="start" name="trash"></ion-icon> Delete
+      </ion-button>
+    </ion-row>  
+
+  </ion-grid>
+
+ 
 </ion-content>

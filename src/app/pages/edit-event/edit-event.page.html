@@ -1,0 +1,111 @@
+
+<ion-content>
+
+  
+  <h1>Edit Event</h1>
+ 
+  <div class="instructions">
+    After editing the event click 'save' to save the changes
+  </div>
+  
+   
+  <div class="form">
+
+    <ion-item lines="none">
+      <ion-label position="stacked">NAME</ion-label>
+      <ion-input ></ion-input>
+    </ion-item>
+  
+    <ion-item lines="none">
+      <ion-label position="stacked">TITLE</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+  
+    <ion-item lines="none">
+      <ion-label position="stacked">CATEGORY</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+  
+    <ion-item lines="none">
+      <ion-label position="stacked">COST</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    
+        <ion-item lines="none">
+          <ion-label position="stacked">DESCRIPTION</ion-label>
+          <ion-textarea></ion-textarea>
+        </ion-item>
+  
+    <ion-grid>
+      <ion-row>
+        
+        <ion-col>
+          <ion-item>
+            <ion-label position="stacked">START DATE <ion-icon name="caret-down-outline"></ion-icon> </ion-label>
+            <ion-datetime displayFormat="MM/DD/YYYY" min="2020-01-01" max="2040-12-31"></ion-datetime>
+          </ion-item>
+        </ion-col>
+
+
+        <ion-col> 
+          <ion-item>
+            <ion-label position="stacked">END DATE  <ion-icon name="caret-down-outline"></ion-icon> </ion-label>
+            <ion-datetime displayFormat="MM/DD/YYYY" min="2020-01-01" max="2040-12-31"></ion-datetime>
+          </ion-item>
+        </ion-col>
+
+      </ion-row>
+    </ion-grid>
+
+     
+  
+    <ion-grid>
+      <ion-row>
+  
+        <ion-col>
+          <ion-item>
+            <ion-label position="stacked">START TIME <ion-icon name="caret-down-outline"></ion-icon> </ion-label>
+            <ion-datetime displayFormat="HH:mm"></ion-datetime>
+          </ion-item>      
+        </ion-col>
+  
+        <ion-col>
+          <ion-item>
+            <ion-label position="stacked">END TIME <ion-icon name="caret-down-outline"></ion-icon> </ion-label>
+            <ion-datetime displayFormat="HH:mm"></ion-datetime>
+          </ion-item>
+        </ion-col>
+  
+      </ion-row>
+    </ion-grid>
+  
+    <div class ="uploadbtn">
+      <ion-button  class="ion-margin"> 
+        <ion-icon name="cloud-upload-outline" slot="start"></ion-icon>
+        Change Flyer
+      </ion-button>
+    </div>
+   
+  
+  
+  
+    <ion-grid class="ion-margin">
+      <ion-row>
+  
+        <ion-col>
+          <ion-button routerLink="/" expand="block"  color="medium">Back</ion-button>
+        </ion-col>
+  
+        <ion-col>
+          <ion-button (click)="openToast()" expand="block" color="light">Save</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+
+ 
+
+  
+
+</ion-content>

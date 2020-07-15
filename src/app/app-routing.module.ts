@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'logout',
     loadChildren: () => import('./pages/logout/logout.module').then( m => m.LogoutPageModule)
   },
+  {
+    path: 'edit-event',
+    loadChildren: () => import('./pages/edit-event/edit-event.module').then( m => m.EditEventPageModule)
+  },
 ];
 
 @NgModule({

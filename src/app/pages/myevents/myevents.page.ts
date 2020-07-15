@@ -1,25 +1,38 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { DetailModalComponent } from '../../detail-modal/detail-modal.component';
+
 
 @Component({
   selector: 'app-myevents',
   templateUrl: './myevents.page.html',
   styleUrls: ['./myevents.page.scss'],
 })
+
 export class MyeventsPage implements OnInit {
-  sliderConfig = {
-    spaceBetween: 4,
-    centeredSlides: true,
-    slidesPerView: 1.2
+
+  fname = 'Anthony';
+  lname = 'Ramos';
+  current_date = '14/07/2020'
+  events = [['Party', 'Beach Party Fun', 'Hello girls and boys! the time is near Mark your calendars and grab your gear!  Off to the ocean we will goBring the bikini, leave the beau!'],
+  ['Party', 'Beach Party Fun', 'TESTING r!  Off to the ocean we will goBring the bikini, leave the beau!'],
+  ['Party', 'Beach Party Fun', 'TESTING r!  Off to the ocean we will goBring the bikini, leave the beau!'],
+  ['Party', 'Beach Party Fun', 'TESTING r!  Off to the ocean we will goBring the bikini, leave the beau!']];
+  
+  
+  constructor(public modalController: ModalController) {
+
   }
 
-  sliderConfigButton = {
-    spaceBetween: 0,
-
-    slidesPerView: 2.5
+  async presentModal() {
+    const modal = await this.modalController.create({
+      component: DetailModalComponent,
+      cssClass: 'my-custom-class'
+    });
+    return await modal.present();
   }
 
 
-  constructor() { }
 
   ngOnInit() {
   }
