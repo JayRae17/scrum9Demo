@@ -48,24 +48,36 @@
   <div class="ion-margin-bottom">
     <ion-grid>
       <ion-row>
-        <ion-col sizeLg="4" sizeMd="4" sizeSm="6" sizeXs="12" *ngFor="let event of events" >
+        <ion-col sizeLg="4" sizeMd="4" sizeSm="6" sizeXs="12" *ngFor="let event of usersevents" >
 
-          <ion-card button (click)="presentModal()" style="border-radius: 15px;" class="card-width">
+          <ion-card style="border-radius: 15px;" class="card-width">
 
             <ion-card-header>
 
-              <ion-card-subtitle> <ion-icon name="layers-outline"></ion-icon>
-                {{event[0]}}
-              </ion-card-subtitle>
+           
+                <ion-card-subtitle> <ion-icon name="layers-outline"></ion-icon>
+                  {{event.category}} {{event.status}}
+                </ion-card-subtitle>
 
-              <ion-card-title>  {{event[1]}}</ion-card-title>
+                <!-- FOR EVENT STATUS -->
+                <ion-card-subtitle *ngIf="event.status == 0" class="event-status"> 
+                  Private
+                </ion-card-subtitle>
+
+                <ion-card-subtitle *ngIf="event.status == 1" class="event-status"> 
+                  Public
+                </ion-card-subtitle>
+
+               
+
+              <ion-card-title>{{event.name}}</ion-card-title>
               
               <ion-row class="description">       
-                {{event[2]}}    
+                {{event.description}} 
               </ion-row>       
             </ion-card-header>
         
-            <ion-button class="ion-no-margin" expand="full">View Details</ion-button>
+            <ion-button  button (click)="presentModal()" class="ion-no-margin" expand="full">View Details</ion-button>
         
           </ion-card>
         </ion-col>

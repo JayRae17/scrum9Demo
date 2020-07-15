@@ -8,15 +8,62 @@ import { DetailModalComponent } from '../detail-modal/detail-modal.component';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  fname = 'Anthony';
-  lname = 'Ramos';
+  events:any;
+  current_user:any;
+
   current_date = '14/07/2020'
-  events = [['Party', 'Beach Party Fun', 'TESTING r!  Off to the ocean we will goBring the bikini, leave the beau!'],
-  ['Party', 'Beach Party Fun', 'TESTING r!  Off to the ocean we will goBring the bikini, leave the beau!'],
-  ['Party', 'Beach Party Fun', 'TESTING r!  Off to the ocean we will goBring the bikini, leave the beau!']];
-  
 
   constructor(public modalController: ModalController) {
+
+    this.current_user=[
+      {
+        "fname": "Anthony",
+        "lname": "Ramos",
+        "username": "Tonytones",
+        "email": "tony@gmail.com",
+        "password": "283ehw8",
+        "admin": 0,
+      }
+    ]
+    
+      // NOT PICKING UP attributes
+      console.log(this.current_user.fname);
+
+    this.events=[
+      {
+        "name": "Beach Party Fun",
+        "category": "Party",
+        "description": "Off to the ocean we will go, Bring the bikini, leave the beau!",
+        "date": null,
+        "location": null,
+        "startTime": null,
+        "endTime": null,
+        "cost": 4000
+
+      },
+      {
+        "name": "Beach Party Fun",
+        "category": "Party",
+        "description": "Off to the ocean we will go, Bring the bikini, leave the beau!",
+        "date": null,
+        "location": null,
+        "startTime": null,
+        "endTime": null,
+        "cost": 4000
+
+      },
+      {
+        "name": "Beach Party Fun",
+        "category": "Party",
+        "description": "Off to the ocean we will go, Bring the bikini, leave the beau!",
+        "date": null,
+        "location": null,
+        "startTime": null,
+        "endTime": null,
+        "cost": 4000
+
+      }
+    ]
 
   }
 

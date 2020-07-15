@@ -18,7 +18,8 @@
       <ion-row>
         <ion-col class="ion-margin-start ion-margin-top">
          <h3 class="ion-no-margin big-message">
-            Welcome, {{fname}}
+            Welcome, {{current_user[0][0]}}
+            
          </h3>   
          
          <p>
@@ -90,76 +91,25 @@
       <ion-row>
         <ion-col sizeLg="4" sizeMd="4" sizeSm="6" sizeXs="12" *ngFor="let event of events">
 
-          <ion-card button (click)="presentModal()" style="border-radius: 15px;" class="card-width">
+          <ion-card style="border-radius: 15px;" class="card-width">
 
             <ion-card-header>
 
               <ion-card-subtitle> <ion-icon name="layers-outline"></ion-icon>
-                {{event[0]}}
+                {{event.category}}
               </ion-card-subtitle>
 
-              <ion-card-title>{{event[1]}}</ion-card-title>
+              <ion-card-title>{{event.name}}</ion-card-title>
               
               <ion-row class="description">       
-                  {{event[2]}} 
+                  {{event.description}} 
               </ion-row>       
             </ion-card-header>
         
-            <ion-button class="ion-no-margin" expand="full">View Details</ion-button>
+            <ion-button button (click)="presentModal()" class="ion-no-margin" expand="full">View Details</ion-button>
         
           </ion-card>
         </ion-col>
-
-        <ion-col>
-
-          <ion-card button (click)="presentModal()" style="border-radius: 15px;" class="card-width">
-
-            <ion-card-header>
-
-              <ion-card-subtitle> <ion-icon name="layers-outline"></ion-icon>
-                Party
-              </ion-card-subtitle>
-
-              <ion-card-title>Beach Party Fun</ion-card-title>
-              
-              <ion-row class="description">       
-                          Hello girls and boys! the time is near
-                          Mark your calendars and grab your gear!
-                          Off to the ocean we will go
-                          Bring the bikini, leave the beau!    
-              </ion-row>       
-            </ion-card-header>
-        
-            <ion-button class="ion-no-margin" expand="full">View Details</ion-button>
-        
-          </ion-card>
-        </ion-col>
-
-        <ion-col>
-
-          <ion-card button (click)="presentModal()" style="border-radius: 15px;" class="card-width">
-
-            <ion-card-header>
-
-              <ion-card-subtitle> <ion-icon name="layers-outline"></ion-icon>
-                Party
-              </ion-card-subtitle>
-
-              <ion-card-title>Beach Party Fun</ion-card-title>
-              
-              <ion-row class="description">       
-                          Hello girls and boys! the time is near
-                          Mark your calendars and grab your gear!
-                          Off to the ocean we will go
-                          Bring the bikini, leave the beau!    
-              </ion-row>       
-            </ion-card-header>
-        
-            <ion-button class="ion-no-margin" expand="full">View Details</ion-button>
-        
-          </ion-card>
-        </ion-col>
-
       </ion-row>
     </ion-grid>
        

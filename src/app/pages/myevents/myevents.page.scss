@@ -149,6 +149,24 @@ ion-card-subtitle{
 
 }
 
+ion-card-subtitle.event-status.ion-inherit-color.md.hydrated{
+    color: #585858;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: lowercase;
+
+  }
+
+.event-status{
+  color: #585858;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: lowercase;
+
+}
+
+
+
 ion-card-title{
   font-size: 16px;
   color:#2a4e7c;

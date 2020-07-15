@@ -9,7 +9,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class DetailModalComponent {
 
-  constructor(public modalController: ModalController, private router: Router, private route:ActivatedRoute) { }
+  constructor(public modalController: ModalController, private router: Router, private route:ActivatedRoute) { 
+    
+  }
+  
 
   dismissModal(){
     this.modalController.dismiss();

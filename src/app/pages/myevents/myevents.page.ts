@@ -14,13 +14,50 @@ export class MyeventsPage implements OnInit {
   fname = 'Anthony';
   lname = 'Ramos';
   current_date = '14/07/2020'
-  events = [['Party', 'Beach Party Fun', 'TESTING r!  Off to the ocean we will goBring the bikini, leave the beau!'],
-  ['Party', 'Beach Party Fun', 'TESTING r!  Off to the ocean we will goBring the bikini, leave the beau!'],
-  ['Party', 'Beach Party Fun', 'TESTING r!  Off to the ocean we will goBring the bikini, leave the beau!']];
-  
+
+  usersevents:any;
+ 
   
   constructor(public modalController: ModalController) {
 
+    this.usersevents=[
+      {
+        "name": "Beach Party Fun",
+        "category": "Party",
+        "description": "Off to the ocean we will go, Bring the bikini, leave the beau!",
+        "date": null,
+        "location": null,
+        "startTime": null,
+        "endTime": null,
+        "cost": 4000,
+        "status":0
+
+      },
+      {
+        "name": "Beach Party Fun",
+        "category": "Party",
+        "description": "Off to the ocean we will go, Bring the bikini, leave the beau!",
+        "date": null,
+        "location": null,
+        "startTime": null,
+        "endTime": null,
+        "cost": 4000,
+        "status":1
+
+      },
+      {
+        "name": "Beach Party Fun",
+        "category": "Party",
+        "description": "Off to the ocean we will go, Bring the bikini, leave the beau!",
+        "date": null,
+        "location": null,
+        "startTime": null,
+        "endTime": null,
+        "cost": 4000,
+        "status":0
+
+      }
+    ]
   }
 
   async presentModal() {
