@@ -7,6 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsersPage implements OnInit {
 
+  users = [
+    {
+      name: 'Gabrielle'
+    },
+    {
+      name: 'Abby'
+    }
+  ]
+
   constructor() { }
 
   ngOnInit() {
