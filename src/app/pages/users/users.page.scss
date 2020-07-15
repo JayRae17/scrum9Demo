@@ -7,6 +7,87 @@ ion-menu-button{
     color: #628cff;
 }
 
+
+
+.banner-img{
+    position: absolute;
+    top: -3.8rem;
+    right: 8rem;
+    width: 15%;
+}
+
+@media only screen and (max-width: 922px) { 
+    .banner-img{
+      position: absolute;
+      top: -3rem;
+      right: 7rem;
+    }
+  }
+  
+  @media only screen and (max-width: 830px) { 
+    .banner-img{
+      position: absolute;
+      top: -2.5rem;
+      right: 7rem;
+    }
+  }
+
+  @media only screen and (max-width: 720px) { 
+    .banner-img{
+      position: absolute;
+      top: -2rem;
+      right: 7rem;
+    }
+  }
+
+
+  
+  @media only screen and (max-width: 640px) { 
+    .banner-img{
+      position: absolute;
+      top: -3.5rem;
+      right: 2.5rem;
+      width: 25%;
+    }
+
+    .hideable-md{
+        display: none;
+    }
+
+    ion-icon{
+        margin: 0;
+    }
+  }
+
+
+  
+  
+  @media only screen and (max-width: 540px) { 
+    .banner-img{
+      display: none;
+    }
+
+    .hideable-md{
+        display: none;
+    }
+  }
+
+
+    
+  @media only screen and (max-width: 350px) { 
+    .banner-img{
+      display: none;
+    }
+
+    .hideable-md{
+        display: none;
+    }
+
+    .hideable-sm{
+        display: none;
+    }
+  }
+
 ion-row{
   
 
@@ -45,7 +126,7 @@ ion-row{
         text-transform: capitalize;
         font-weight: 300;
         --background: #628cff;
-        --border-radius: 7px;
+        --border-radius: 20px;
         --box-shadow: none;
     }
 

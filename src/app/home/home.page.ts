@@ -8,7 +8,13 @@ import { DetailModalComponent } from '../detail-modal/detail-modal.component';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  fname = "Anthony";
+  fname = 'Anthony';
+  lname = 'Ramos';
+  current_date = '14/07/2020'
+  events = [['Party', 'Beach Party Fun', 'TESTING r!  Off to the ocean we will goBring the bikini, leave the beau!'],
+  ['Party', 'Beach Party Fun', 'TESTING r!  Off to the ocean we will goBring the bikini, leave the beau!'],
+  ['Party', 'Beach Party Fun', 'TESTING r!  Off to the ocean we will goBring the bikini, leave the beau!']];
+  
 
   constructor(public modalController: ModalController) {
 

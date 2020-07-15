@@ -14,8 +14,7 @@ export class MyeventsPage implements OnInit {
   fname = 'Anthony';
   lname = 'Ramos';
   current_date = '14/07/2020'
-  events = [['Party', 'Beach Party Fun', 'Hello girls and boys! the time is near Mark your calendars and grab your gear!  Off to the ocean we will goBring the bikini, leave the beau!'],
-  ['Party', 'Beach Party Fun', 'TESTING r!  Off to the ocean we will goBring the bikini, leave the beau!'],
+  events = [['Party', 'Beach Party Fun', 'TESTING r!  Off to the ocean we will goBring the bikini, leave the beau!'],
   ['Party', 'Beach Party Fun', 'TESTING r!  Off to the ocean we will goBring the bikini, leave the beau!'],
   ['Party', 'Beach Party Fun', 'TESTING r!  Off to the ocean we will goBring the bikini, leave the beau!']];
   

@@ -82,58 +82,26 @@
         </ion-col>
       </ion-row>
     </ion-grid>
-
- 
-
-    <!-- <ion-slides [options]="sliderConfigButton">
-      <ion-slide>
-        <ion-button shape="round" fill="outline">BIRTHDAY</ion-button>
-      </ion-slide>
-
-      <ion-slide>
-        <ion-button shape="round" fill="outline" color="secondary">CONFERENCE</ion-button>
-      </ion-slide>
-
-      <ion-slide>
-        <ion-button shape="round" fill="outline" color="tertiary">SEMINAR</ion-button>
-      </ion-slide>
-
-      <ion-slide>
-        <ion-button shape="round" fill="outline" color="success">PARTY</ion-button>
-      </ion-slide>
-
-      <ion-slide>
-        <ion-button shape="round" fill="outline" color="secondary">CONCERT</ion-button>
-      </ion-slide>
-
-      <ion-slide>
-        <ion-button shape="round" fill="outline" color="tertiary">WORKSHOP</ion-button>
-      </ion-slide>
-
-    </ion-slides> -->
   </div>
 
 
   <div class="ion-margin-bottom">
     <ion-grid>
       <ion-row>
-        <ion-col>
+        <ion-col sizeLg="4" sizeMd="4" sizeSm="6" sizeXs="12" *ngFor="let event of events">
 
           <ion-card button (click)="presentModal()" style="border-radius: 15px;" class="card-width">
 
             <ion-card-header>
 
               <ion-card-subtitle> <ion-icon name="layers-outline"></ion-icon>
-                Party
+                {{event[0]}}
               </ion-card-subtitle>
 
-              <ion-card-title>Beach Party Fun</ion-card-title>
+              <ion-card-title>{{event[1]}}</ion-card-title>
               
               <ion-row class="description">       
-                          Hello girls and boys! the time is near
-                          Mark your calendars and grab your gear!
-                          Off to the ocean we will go
-                          Bring the bikini, leave the beau!    
+                  {{event[2]}} 
               </ion-row>       
             </ion-card-header>
         
