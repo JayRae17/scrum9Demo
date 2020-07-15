@@ -1,0 +1,51 @@
+
+<ion-content>
+   
+  <h1>Welcome</h1>
+ 
+  <div class="instructions">
+    Statement about the application! 
+  </div>
+  
+  <form  #form="ngForm" class="form">
+
+    <ion-item lines="none">
+      <ion-label position="stacked">FIRSTNAME</ion-label>
+      <ion-input type="text" placeholder="Firstname"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label position="stacked">LASTNAME</ion-label>
+      <ion-input type="text" placeholder="Lastname"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label position="stacked">USERNAME</ion-label>
+      <ion-input type="email" placeholder=""></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label position="stacked">EMAIL</ion-label>
+      <ion-input type="email" placeholder="your@email.com"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label position="stacked">PASSWORD</ion-label>
+      <ion-input type="password" placeholder=""></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label position="stacked">CONFIRM</ion-label>
+      <ion-input type="password" placeholder=""></ion-input>
+    </ion-item>
+
+
+    <div class ="uploadbtn">
+      <ion-button  type="submit" [disabled]="form.invalid" class="ion-margin"> 
+        Register
+      </ion-button>
+    </div>
+          
+
+  </form>
+</ion-content>

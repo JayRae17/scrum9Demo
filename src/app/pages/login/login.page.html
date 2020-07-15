@@ -1,0 +1,35 @@
+<ion-content>
+  <h1>Login</h1>
+
+  <form  #form="ngForm" (ngSubmit)="login(form)" class="form">
+
+    <ion-item lines="none">
+      <ion-label position="stacked">EMAIL</ion-label>
+      <ion-input name="email" type="email" placeholder="your@email.com" ngModel required></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label position="stacked">PASSWORD</ion-label>
+      <ion-input  name="password" type="password" placeholder="Password" ngModel required></ion-input>
+    </ion-item>
+
+
+    <ion-grid class="ion-margin">
+      <ion-row>
+  
+        <ion-col>
+          <ion-button type="submit" [disabled]="form.invalid" expand="block"  color="medium">Register</ion-button>
+        </ion-col>
+  
+        <ion-col>
+          <ion-button type="submit" [disabled]="form.invalid" expand="block" color="light">Login</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+         
+  </form>
+
+</ion-content>
+
+
+

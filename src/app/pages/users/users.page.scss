@@ -1,0 +1,55 @@
+.header-md::after {
+    background-image: none;
+}
+
+
+ion-menu-button{
+    color: #628cff;
+}
+
+ion-row{
+  
+
+    .big-message{
+    
+      font-weight: bold;
+      font-size: 32px;
+      color: #575757;
+      letter-spacing: 1px;
+      margin-left: 1rem;
+
+  
+    }
+
+}  
+
+
+.user-table{
+    text-align: left;
+    margin-top: 1rem;
+    margin-left: 1.8rem;
+
+    .table-headers{
+        font-size: 18px;
+        font-weight: bold;
+        color: #b3b3b3;
+        margin-bottom: 0.5rem;
+    }
+}
+
+
+.action-button{
+    
+
+    ion-button{
+        text-transform: capitalize;
+        font-weight: 300;
+        --background: #628cff;
+        --border-radius: 7px;
+        --box-shadow: none;
+    }
+
+    ion-icon{
+        margin-right: 1px;
+    }
+}

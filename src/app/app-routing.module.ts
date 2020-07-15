@@ -27,6 +27,31 @@ const routes: Routes = [
     path: 'edit-event',
     loadChildren: () => import('./pages/edit-event/edit-event.module').then( m => m.EditEventPageModule)
   },
+
+  // GABBY
+  {
+    path: 'register',
+    loadChildren: () => import('./pages/register/register.module').then( m => m.RegisterPageModule)
+  },
+  {
+    path: 'users',
+    loadChildren: () => import('./pages/users/users.module').then( m => m.UsersPageModule)
+  },
+  {
+    path: 'viewuser',
+    loadChildren: () => import('./pages/viewuser/viewuser.module').then( m => m.ViewuserPageModule)
+  },
+  // GABBY
+
+
+  // DIANDRA
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
+ 
+  // DIANDRA
+  
 ];
 
 @NgModule({

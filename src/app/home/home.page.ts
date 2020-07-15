@@ -8,6 +8,8 @@ import { DetailModalComponent } from '../detail-modal/detail-modal.component';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  fname = "Anthony";
+
   constructor(public modalController: ModalController) {
 
   }
@@ -21,17 +23,9 @@ export class HomePage {
   }
 
   sliderConfig = {
-    spaceBetween: 4,
-    centeredSlides: true,
+    spaceBetween: 2,
     slidesPerView: 3
   }
 
-  sliderConfigButton = {
-    spaceBetween: 0,
-
-    slidesPerView: 2.5
-  }
-
-  
 
 }
