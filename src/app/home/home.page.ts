@@ -32,16 +32,10 @@ export class HomePage {
   }
 
   sliderConfig = {
-    spaceBetween: 4,
-    centeredSlides: true,
-    slidesPerView: 3
+    spaceBetween: 2,
+    slidesPerView: 2.8
   }
 
-  sliderConfigButton = {
-    spaceBetween: 0,
-
-    slidesPerView: 2.5
-  }
   // events_list: Subscription;
   ngOnInit() {
     console.log('yolooo111')

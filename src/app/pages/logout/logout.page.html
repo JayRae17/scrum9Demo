@@ -1,19 +1,20 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button menu="main-menu"></ion-menu-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-  <ion-card class="ion-padding ion-margin">
-    <div class="center_text">You have successfully logged out</div>
-    <ion-button color="tertiary"  expand="full" [routerLink]="['/login']">LOGIN </ion-button>
-<br>
-<hr>
-<ion-button color="tertiary"  expand="full" [routerLink]="['/register']">REGISTER </ion-button>
+  <h1>You have successfully logged out</h1>
 
-  </ion-card>
+  <ion-grid class="ion-margin">
+    <ion-row>
+
+      <ion-col>
+        <ion-button [routerLink]="['/register']" expand="block"  color="medium">Register</ion-button>
+      </ion-col>
+
+      <ion-col>
+        <ion-button [routerLink]="['/login']" expand="block" color="light">Login</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  
+
 
 </ion-content>

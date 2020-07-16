@@ -1,34 +1,33 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-
-
 <ion-content>
-
-<div>
-<ion-card>  
-<ion-item>
-  <ion-label>EMAIL:</ion-label>
-  <ion-input placeholder="Enter Email"   [(ngModel)]="username"></ion-input>
-</ion-item>
-
-<br>
-<ion-item>
-  <ion-label>PASSWORD:</ion-label> 
-  
-  <ion-input placeholder="Enter Password" [(ngModel)]="password"></ion-input>
-</ion-item> 
+  <h1>Login</h1>
 
 
-</ion-card>
 
-<ion-button color="tertiary"  expand="full" (click)= "login_verify()">LOGIN </ion-button>
-<br>
-<hr>
-<ion-button color="tertiary"  expand="full" [routerLink]="['/register']">REGISTER </ion-button>
+
+<div class="form">
+
+  <ion-item lines="none">
+    <ion-label position="stacked">EMAIL</ion-label>
+    <ion-input [(ngModel)]="username"></ion-input>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-label position="stacked">PASSWORD</ion-label>
+    <ion-input [(ngModel)]="password"></ion-input>
+  </ion-item> 
+
+  <ion-grid class="ion-margin">
+    <ion-row>
+
+      <ion-col>
+        <ion-button (click)= "login_verify()" expand="block"  color="medium">Login</ion-button>
+      </ion-col>
+
+      <ion-col>
+        <ion-button [routerLink]="['/register']" expand="block" color="light">Register</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 </div>
 </ion-content>

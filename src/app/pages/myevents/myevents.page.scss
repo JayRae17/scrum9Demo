@@ -93,6 +93,7 @@ ion-searchbar{
   height: 80%;
 }
 
+
 ion-row{
   
 
@@ -117,54 +118,15 @@ ion-row{
   }
 }
 
+
 .card-width{
   max-width: 90%;
   min-width: 90%;
 
-  margin-left: 2rem;
-}
-
-@media only screen and (max-width: 445px) { 
-  p { 
-    display: none; 
-  } 
-}
-
-@media only screen and (max-width: 600px) { 
-  .banner-img{
-    display: none;
-  }
+  margin-left: 1rem;
 }
 
 
-
-@media only screen and (max-width: 920px) { 
-  .banner-img{
-    position: absolute;
-    top: -5.5rem;
-    right: 35rem;
-  }
-
-}
-
-
-@media only screen and (max-width: 740px) { 
-  .banner-img{
-    position: absolute;
-    top: 3rem;
-    right: 4rem;
-  }
-}
-
-
-@media only screen and (max-width: 650px) { 
-  .banner-img{
-    position: absolute;
-    top: -4rem;
-    right: 4rem;
-    width: 28%;
-  }
-}
 
 .event-header{
   color: #575757;
@@ -187,6 +149,24 @@ ion-card-subtitle{
 
 }
 
+ion-card-subtitle.event-status.ion-inherit-color.md.hydrated{
+    color: #585858;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: lowercase;
+
+  }
+
+.event-status{
+  color: #585858;
+  font-weight: bold;
+  font-size: 13px;
+  text-transform: lowercase;
+
+}
+
+
+
 ion-card-title{
   font-size: 16px;
   color:#2a4e7c;
@@ -196,7 +176,7 @@ ion-card-title{
 
 
 .description{
-  font-size: 13px;
+  font-size: 15px;
   margin-top: 0.4rem;
   line-height: 1.2rem;
   letter-spacing: 0.3px;
@@ -209,4 +189,327 @@ ion-card{
   -webkit-box-shadow: 0px 8px 24px 0px rgba(243,242,245,1);
 -moz-box-shadow: 0px 8px 24px 0px rgba(243,242,245,1);
 box-shadow: 0px 8px 24px 0px rgba(243,242,245,1);
+}
+
+
+
+@media only screen and (max-width: 922px) { 
+  .banner-img{
+    position: absolute;
+    top: -2rem;
+    left: 3rem;
+  }
+
+  .action-button{
+    // display: flex;
+    margin-bottom: 20px;
+  
+  
+    ion-button{
+        position: absolute;
+        left: 24rem;
+        top: 6rem;
+      
+    }
+
+  }
+
+}
+
+
+@media only screen and (max-width: 870px) { 
+  .banner-img{
+    position: absolute;
+    top: -2rem;
+    left: 2rem;
+  }
+
+  .action-button{
+    // display: flex;
+    margin-bottom: 20px;
+  
+  
+    ion-button{
+        position: absolute;
+        left: 22rem;
+        top: 6rem;
+      
+    }
+
+  }
+
+  ion-row{
+
+    .big-message{
+      top: -13rem;
+      right: 40%;
+      font-weight: bold;
+      font-size: 32px;
+      color: #575757;
+      letter-spacing: 1px;
+      position: absolute;
+
+    }
+  }
+  
+}
+
+
+
+
+@media only screen and (max-width: 800px) { 
+  .banner-img{
+    position: absolute;
+    top: -2rem;
+    left: 2rem;
+  }
+
+  .action-button{
+    // display: flex;
+    margin-bottom: 20px;
+  
+  
+    ion-button{
+        position: absolute;
+        left: 21rem;
+        top: 6rem;
+      
+    }
+
+  }
+
+  ion-row{
+
+    .big-message{
+      top: -13rem;
+      right: 34%;
+      font-weight: bold;
+      font-size: 32px;
+      color: #575757;
+      letter-spacing: 1px;
+      position: absolute;
+
+    }
+  }
+  
+}
+
+
+@media only screen and (max-width: 730px) { 
+  .banner-img{
+    position: absolute;
+    top: -2rem;
+    left: 2rem;
+  }
+
+  .action-button{
+    // display: flex;
+    margin-bottom: 20px;
+  
+  
+    ion-button{
+        position: absolute;
+        left: 19rem;
+        top: 6rem;
+      
+    }
+
+  }
+
+  ion-row{
+
+    .big-message{
+      top: -13rem;
+      right: 30%;
+      font-weight: bold;
+      font-size: 32px;
+      color: #575757;
+      letter-spacing: 1px;
+      position: absolute;
+
+    }
+  }
+  
+}
+
+
+@media only screen and (max-width: 670px) { 
+  .banner-img{
+    position: absolute;
+    top: -2rem;
+    left: 2rem;
+  }
+
+  .action-button{
+    // display: flex;
+    margin-bottom: 20px;
+  
+  
+    ion-button{
+        position: absolute;
+        left: 16rem;
+        top: 6rem;
+      
+    }
+
+  }
+
+  ion-row{
+
+    .big-message{
+      top: -13rem;
+      right: 30%;
+      font-weight: bold;
+      font-size: 32px;
+      color: #575757;
+      letter-spacing: 1px;
+      position: absolute;
+
+    }
+  }
+  
+}
+
+
+@media only screen and (max-width: 580px) { 
+  .banner-img{
+    position: absolute;
+    top: 1rem;
+    left: 10.5rem;
+  }
+
+  .action-button{
+    // display: flex;
+    margin-bottom: 20px;
+  
+  
+    ion-button{
+        position: absolute;
+        left: 12rem;
+        top: 6rem;
+      
+    }
+
+  }
+
+  ion-row{
+
+    .big-message{
+      top: -13rem;
+      right: 28%;
+      font-weight: bold;
+      font-size: 32px;
+      color: #575757;
+      letter-spacing: 1px;
+      position: absolute;
+
+    }
+  }
+  
+}
+
+
+@media only screen and (max-width: 480px) { 
+  .banner-img{
+    position: absolute;
+    top: 1rem;
+    left: 8rem;
+    width: 40%;
+  }
+
+  .action-button{
+    // display: flex;
+    margin-bottom: 20px;
+  
+  
+    ion-button{
+        position: absolute;
+        left: 10rem;
+        top: 6rem;     
+    }
+  }
+
+  ion-row{
+    .big-message{
+      top: -13rem;
+      right: 23%;
+      font-weight: bold;
+      font-size: 32px;
+      color: #575757;
+      letter-spacing: 1px;
+      position: absolute;
+
+    }
+  } 
+}
+
+
+@media only screen and (max-width: 410px) { 
+  .banner-img{
+    position: absolute;
+    top: -1rem;
+    left: 7rem;
+    width: 40%;
+  }
+
+  .action-button{
+    // display: flex;
+    margin-bottom: 20px;
+  
+  
+    ion-button{
+        position: absolute;
+        left: 8rem;
+        top: 6rem;     
+    }
+  }
+
+  ion-row{
+    .big-message{
+      top: -13rem;
+      right: 15%;
+      font-weight: bold;
+      font-size: 32px;
+      color: #575757;
+      letter-spacing: 1px;
+      position: absolute;
+
+    }
+  }
+}
+
+
+
+@media only screen and (max-width: 365px) { 
+  .banner-img{
+    position: absolute;
+    top: -1rem;
+    left: 4rem;
+    width: 60%;
+  }
+
+  .action-button{
+    // display: flex;
+    margin-bottom: 20px;
+  
+  
+    ion-button{
+        position: absolute;
+        left: 6.5rem;
+        top: 6rem;     
+    }
+  }
+
+  ion-row{
+    .big-message{
+      top: -13rem;
+      right: 21%;
+      font-weight: bold;
+      font-size: 24px;
+      color: #575757;
+      letter-spacing: 1px;
+      position: absolute;
+
+    }
+  }
 }

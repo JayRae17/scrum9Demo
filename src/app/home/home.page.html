@@ -22,6 +22,9 @@
          <h3 class="ion-no-margin big-message">
             Welcome, {{current_user}}
          </h3>   
+         <p>
+          Check out what new events have been added!
+         </p>
          
         </ion-col>
       </ion-row>
@@ -81,47 +84,15 @@
         </ion-col>
       </ion-row>
     </ion-grid>
-
- 
-
-    <!-- <ion-slides [options]="sliderConfigButton">
-      <ion-slide>
-        <ion-button shape="round" fill="outline">BIRTHDAY</ion-button>
-      </ion-slide>
-
-      <ion-slide>
-        <ion-button shape="round" fill="outline" color="secondary">CONFERENCE</ion-button>
-      </ion-slide>
-
-      <ion-slide>
-        <ion-button shape="round" fill="outline" color="tertiary">SEMINAR</ion-button>
-      </ion-slide>
-
-      <ion-slide>
-        <ion-button shape="round" fill="outline" color="success">PARTY</ion-button>
-      </ion-slide>
-
-      <ion-slide>
-        <ion-button shape="round" fill="outline" color="secondary">CONCERT</ion-button>
-      </ion-slide>
-
-      <ion-slide>
-        <ion-button shape="round" fill="outline" color="tertiary">WORKSHOP</ion-button>
-      </ion-slide>
-
-    </ion-slides> -->
   </div>
 
 
   <div class="ion-margin-bottom" >
     <ion-grid >
       <ion-row > 
-        <ion-col *ngFor="let e of (events_list |async  ); let i = index ">
+        <ion-col sizeLg="4" sizeMd="4" sizeSm="6" sizeXs="12" *ngFor="let e of (events_list |async  ); let i = index ">
 
           <ion-card button (click)="presentModal(e.id)" style="border-radius: 15px;" class="card-width" >
-
-   
-
 
             <ion-card-header >
 

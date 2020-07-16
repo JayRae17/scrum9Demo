@@ -1,29 +1,74 @@
-ion-item{
-    --background: primary ;
-    --color: black;
-}
-ion-button{
-    --background: #062f77;
+*{
+  color: #575757;
 }
 
-.info{
-    --background: primary ;
-    --color: white;
 
+h1{
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-top: 2rem;
 }
 
-.column {
-    float: left;
-    width: 50%;
+
+
+.form{
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+
+  ion-label{
+      letter-spacing: 0.6px;
+      font-size: 16px;
+      color: #628cff;
   }
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
+
+  ion-input{
+      background-color: #f0f0f0;
+      border-radius: 6px;
+      max-width: 100%;
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+      
   }
 
-  .data{
-    background-color: rgb(141, 205, 221);
+
+  ion-button{
+      text-transform: capitalize;
+      font-weight: 300;
+      --background: #628cff;
+      --border-radius: 7px;
+      --box-shadow: none;
+      color: #fff;
+      margin-left: auto;
+      margin-right: auto;
+
+      ion-icon{
+          color:#fff;
+      }
+
+
+  }
+
 }
+
+
+ion-col{
+  ion-icon{
+      color: #e0e0e0;
+  }
+}
+
+
+.uploadbtn{
+  text-align: center;
+  margin-top: 1rem;
+}
+
+
+
+
+
+

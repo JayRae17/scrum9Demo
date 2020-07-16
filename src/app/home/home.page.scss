@@ -114,16 +114,14 @@ ion-row{
 }
 
 ion-slides{
-  margin-right: 2rem;
-  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+  margin-left: 1rem;
   margin-bottom: 2rem;
 }
 
 .card-width{
   max-width: 90%;
   min-width: 90%;
-
-  margin-left: 2rem;
 }
 
 @media only screen and (max-width: 445px) { 
@@ -131,14 +129,6 @@ ion-slides{
     display: none; 
   } 
 }
-
-@media only screen and (max-width: 600px) { 
-  .banner-img{
-    display: none;
-  }
-}
-
-
 
 @media only screen and (max-width: 870px) { 
   .banner-img{
@@ -166,6 +156,25 @@ ion-slides{
     width: 28%;
   }
 }
+
+
+@media only screen and (max-width: 600px) { 
+  .banner-img{
+    display: none;
+  }
+  ion-row{
+
+    .big-message{
+      top: -11rem;
+      font-weight: bold;
+      font-size: 24px;
+      position: absolute;
+      margin-right: 4rem;
+    }
+  }
+  
+}
+
 
 .event-header{
   color: #575757;
