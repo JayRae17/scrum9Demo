@@ -21,7 +21,7 @@ export class EventsService {
   getEvents():Observable<any>{
     const user = localStorage.getItem('currentUser');
     const token = this.get_token(user);
-    return this.http.get(`${this.url_api}/events`,{headers:{mode:"cors","x-access-token":token}}).pipe(map(results=> results.Events));
+    return this.http.get(`${this.url_api}/events`,{headers:{mode:"cors","x-access-token":token}}).pipe(map(results=> results));
   } 
   get_single_event(event_id):Observable<any>{
     const user = localStorage.getItem('currentUser');
@@ -47,7 +47,7 @@ export class EventsService {
     const user = localStorage.getItem('currentUser');
     console.log('userrrr',user)
     const token = this.get_token(user);
-    return this.http.get(`${this.url_api}/myevents/${user}`,{headers:{mode:"cors","x-access-token":token}}).pipe(map(results=> results.Events));
+    return this.http.get(`${this.url_api}/myevents/${user}`,{headers:{mode:"cors","x-access-token":token}});
   } 
 
   delete_event(): Observable<any>{

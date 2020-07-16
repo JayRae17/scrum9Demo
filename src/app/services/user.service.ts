@@ -24,7 +24,12 @@ export class UserService {
   getUsers():Observable<any>{
     const user = localStorage.getItem('currentUser');
     const token = this.get_token(user);
-    return this.http.get(`${this.url_api}/user`,{headers:{mode:"cors","x-access-token":token}}).pipe(map(results=> results.users));
+    return this.http.get(`${this.url_api}/user`,{headers:{mode:"cors","x-access-token":token}});
+  } 
+  getUser():Observable<any>{
+    const user = localStorage.getItem('currentUser');
+    const token = this.get_token(user);
+    return this.http.get(`${this.url_api}/user/detail`,{headers:{mode:"cors","x-access-token":token}});
   } 
 
 
@@ -32,6 +37,12 @@ export class UserService {
     const user = localStorage.getItem('currentUser');
     const token = this.get_token(user);
     return this.http.delete(`${this.url_api}/user/${id}`,{headers:{mode:"cors","x-access-token":token}});
+  }
+
+  promote_user(id): Observable<any>{
+    const user = localStorage.getItem('currentUser');
+    const token = this.get_token(user);
+    return this.http.put(`${this.url_api}/user/promote/${id}`,{headers:{mode:"cors","x-access-token":token}});
   }
 
 

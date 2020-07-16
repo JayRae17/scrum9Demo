@@ -10,8 +10,11 @@ export class LogoutPage implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    localStorage.clear();
     localStorage.removeItem('currentUser');
+    localStorage.clear();
+    
+    
+    console.log('logoutttt')
   }
 
 }

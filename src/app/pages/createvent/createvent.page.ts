@@ -18,7 +18,7 @@ export class CreateventPage implements OnInit {
   date2: '';
   cost: '';
   venue:'';
-  flyer: File;
+  flyer: '';
   visibility: Boolean;
   data:any;
   
@@ -45,7 +45,7 @@ export class CreateventPage implements OnInit {
     console.log('name',this.name, this.date1);
     this.data={
       'name': this.name, 'description': this.description, 'category': this.category, 'title': this.title, 
-      'start_dt': this.date1, 'end_dt': this.date2, 'cost': this.cost, 'venue': this.venue,  'visibility': true
+      'start_dt': this.date1, 'end_dt': this.date2, 'cost': this.cost, 'venue': this.venue, 'flyer': this.flyer,  'visibility': true
     };
     console.log('adevent', this.data);
     // this.ser.create_event(this.data).subscribe(result=> console.log(result));
@@ -60,8 +60,9 @@ export class CreateventPage implements OnInit {
     form.append("category",""+this.category)
     form.append("start_date",this.date1)
     form.append("end_date",this.date2)
-    // form.append("flyer",this.event.file)
+    form.append("flyer",this.flyer)
     form.append("venue",this.venue)
+    console.log('form daaattattaaa: ', this.flyer);
     this.ser.create_event(form).subscribe(res=>{
       
       if (!res.errors){
@@ -77,5 +78,19 @@ export class CreateventPage implements OnInit {
     () => console.log('HTTP request completed.'))
 
   }
+
+
+  loadImageFromDevice(event: { target: { files: any[]; }; }) {
+    console.log("image loooadd")
+    const file = event.target.files[0];
+    console.log(file)
+    this.flyer = file;
+    localStorage.setItem(this.flyer, file)
+  
+  }
+
+
+
+
 
 }

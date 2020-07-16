@@ -70,7 +70,10 @@
   
   
     <div class ="uploadbtn">
-      <ion-button  class="ion-margin"> 
+    <input
+  style="display: none"
+  type="file" (change)="loadImageFromDevice($event)" #fileInput>
+      <ion-button  class="ion-margin" (click)="fileInput.click()"> 
         <ion-icon name="cloud-upload-outline" slot="start"></ion-icon>
         Upload Flyer
       </ion-button>

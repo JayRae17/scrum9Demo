@@ -16,11 +16,11 @@
 
 
 
-    <ion-grid>
-      <ion-row>
+    <ion-grid  *ngFor= "let user of (user_list | async);">
+      <ion-row   >
         <ion-col class="ion-margin-start ion-margin-top">
          <h3 class="ion-no-margin big-message">
-            Welcome, {{current_user}}
+            Welcome, {{user.firstname}}  
          </h3>   
          <p>
           Check out what new events have been added!
@@ -31,8 +31,11 @@
 
       <ion-row class="action-button">
           
-          <ion-button routerLink="/myevents"> 
+          <ion-button *ngIf="user.admin==0" routerLink="/myevents"  > 
             <ion-icon slot="start" name="calendar"></ion-icon> Your Events 
+          </ion-button>
+          <ion-button *ngIf="user.admin==1" routerLink="/users"  > 
+            <ion-icon slot="start" name="calendar"></ion-icon> Users 
           </ion-button>
       
         
@@ -90,7 +93,7 @@
   <div class="ion-margin-bottom" >
     <ion-grid >
       <ion-row > 
-        <ion-col sizeLg="4" sizeMd="4" sizeSm="6" sizeXs="12" *ngFor="let e of (events_list |async  ); let i = index ">
+        <ion-col sizeLg="4" sizeMd="4" sizeSm="6" sizeXs="12" *ngFor="let e of (events_list|async); let i = index ">
 
           <ion-card button (click)="presentModal(e.id)" style="border-radius: 15px;" class="card-width" >
 

@@ -32,7 +32,8 @@ export class DetailModalComponent implements OnInit {
   results;
   num;
 //  results2=JSON.parse(this.results);
-
+image:string
+pic: any;
   ngOnInit() {
     console.log(`${this.foo} ${this.bar} ${this.results} ${this.num}`);
     localStorage.setItem('currentid',this.num );
@@ -40,7 +41,10 @@ export class DetailModalComponent implements OnInit {
     this.curr_event= this.events_ser.get_single_event(this.num);
     this.c =this.events_ser.get_single_event(this.num).subscribe(res=> {console.log('polo',res.Events);
     this.c= res.Events;
+    this.image= this.c.flyer;
+    this.pic=localStorage.getItem(this.image);
     console.log('results', this.c);
+    console.log('results image', this.image);
   });
     
     console.log('list', this.curr_event);

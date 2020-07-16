@@ -49,7 +49,7 @@
         </ion-col>
       </ion-row>
 
-      <ion-row *ngFor="let user of (users | async)">
+      <ion-row *ngFor="let user of (users | async); let i = index">
 
         <ion-col class="hideable-md">
           {{ user.firstname }}
@@ -68,7 +68,7 @@
         <ion-col>
           <div class="action-button">
           
-            <ion-button routerLink="/home"> 
+            <ion-button routerLink="/home" (click)="promote_user(user.user_id)"> 
               <ion-icon slot="start" name="add"></ion-icon> <p class="hideable-sm">Promote </p>
             </ion-button>
         
@@ -77,8 +77,8 @@
 
         <ion-col>
           <div class="action-button">
-          <input name="id" [(NgModel)]="user.id">
-            <ion-button (click)="delete_user()" > 
+          
+            <ion-button  (click)="delete_user(user.user_id)" routerLink="/users" > 
               <ion-icon slot="start" name="trash"></ion-icon> <p class="hideable-sm">Remove</p>
             </ion-button>
         

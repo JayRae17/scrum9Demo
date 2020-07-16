@@ -1,9 +1,10 @@
+import { element } from 'protractor';
 import { Router } from '@angular/router';
 import { UserService } from './../../services/user.service';
 import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-
+import {map}  from 'rxjs/operators';
 @Component({
   selector: 'app-users',
   templateUrl: './users.page.html',
@@ -11,22 +12,44 @@ import { Subscription } from 'rxjs';
 })
 export class UsersPage implements OnInit {
 users: Observable<any>;
-id:string;
+id:''
   constructor(private ser:UserService, private router:Router) { }
 
   ngOnInit() {
 
-    this.users= this.ser.getUsers();
+    this.users= this.ser.getUsers().pipe(map(results=> results.users));
     console.log('userssss',this.users);
   }
 
-  delete_user(){
+  delete_user(user){
 
-    console.log('user id',this.id);
-    this.ser.delete_user(this.id).subscribe(res=>{ 
+    console.log('user id',user);
+    this.ser.delete_user(user).subscribe(res=>{ 
 
       if (!res.errors){
-        this.router.navigate(["/users"]);
+        this.router.navigate(["/home"]);
+      
+
+      }else{
+        console.log(res.errors)
+      }
+      
+    
+    },err => console.log('HTTP Error', err),
+    () => console.log('HTTP request completed.'))
+      
+    
+  }
+
+
+  promote_user(user){
+
+    console.log('user id for promotion',user);
+    this.ser.promote_user(user).subscribe(res=>{ 
+
+      if (!res.errors){
+        this.router.navigate(["/home"]);
+      
 
       }else{
         console.log(res.errors)

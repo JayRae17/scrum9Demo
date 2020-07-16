@@ -3,7 +3,7 @@ import { EventsService } from './../../services/events.service';
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { DetailModalComponent } from '../../detail-modal/detail-modal.component';
-
+import {map}  from 'rxjs/operators';
 
 @Component({
   selector: 'app-myevents',
@@ -40,11 +40,12 @@ export class MyeventsPage implements OnInit {
     return await modal.present();
   }
   events_list: Observable<any>;
-
+  email:string;
 
   ngOnInit() {
+    this.email= localStorage.getItem('currentUser')
     console.log('yolooo111')
-    this.events_list= this.ser.myEvents();
+    this.events_list= this.ser.myEvents().pipe(map(results=> results.Events));
     console.log('yolooo33333')
     console.log('yah',this.events_list);
 
