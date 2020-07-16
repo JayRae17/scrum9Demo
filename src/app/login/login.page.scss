@@ -1,0 +1,29 @@
+ion-item{
+    --background: primary ;
+    --color: black;
+}
+ion-button{
+    --background: #062f77;
+}
+
+.info{
+    --background: primary ;
+    --color: white;
+
+}
+
+.column {
+    float: left;
+    width: 50%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .data{
+    background-color: rgb(141, 205, 221);
+}
